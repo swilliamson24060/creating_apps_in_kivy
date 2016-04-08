@@ -12,7 +12,7 @@ class AddLocationForm(BoxLayout):
 
     # BEGIN SEARCHLOCATION
     def search_location(self):
-        search_template = "http://api.openweathermap.org/data/2.5/" + "find?q={}&type=like"  # <1>
+        search_template = "http://api.openweathermap.org/data/2.5/" + "find?q={}&type=like"  + "&APPID=11111111111111111111111111111111" # <1>
         search_url = search_template.format(self.search_input.text)
         request = UrlRequest(search_url, self.found_location) # <2>
 
